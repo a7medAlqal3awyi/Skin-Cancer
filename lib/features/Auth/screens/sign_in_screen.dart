@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:skin_cancer_app/config/routes/app_routes.dart';
+import '../../../core/routing/app_routes.dart';
 import 'package:skin_cancer_app/core/helper/exetention.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/assets_path.dart';
@@ -178,7 +178,11 @@ class _SingInScreenState extends State<SingInScreen> {
                                         daliogContent: StringManager.doneDaliog,
                                         actionName: "Go to Home",
                                         context: context,
-                                        onTap: () {});
+                                        onTap: () {
+                                          context.pushReplacementNamed(
+                                            Routes.gnavBar,
+                                          );
+                                        });
                                   }
                                 },
                                 textColor: Colors.white,

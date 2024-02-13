@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:skin_cancer_app/config/routes/app_routes.dart';
+import '../../../core/routing/app_routes.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
 import 'package:skin_cancer_app/core/widgets/custom_button.dart';
 import 'package:skin_cancer_app/features/onBoarding/widgets/clipper.dart';
-import 'package:otp_text_field/otp_field.dart';
-import 'package:otp_text_field/otp_field_style.dart';
 import 'package:pinput/pinput.dart';
 
 class OTPCodeScreen extends StatelessWidget {
