@@ -8,12 +8,15 @@ import 'package:skin_cancer_app/features/onBoarding/screens/chose_user.dart';
 import 'package:skin_cancer_app/features/onBoarding/screens/on_boarding_screen.dart';
 import 'package:skin_cancer_app/features/splash/splash_screen.dart';
 
+import '../../features/Auth/screens/sign_up/sign_up_screen.dart';
+
 class Routes {
   static const String initialRoutes = "/";
   static const String onBoardingRoutes = "/OnBoardingScreen";
   static const String choseUserRoutes = "/ChoseUser";
   static const String choseAuthFunScreenRoutes = "/ChoseAuthFunScreen";
   static const String singInScreenRoutes = "/SingInScreen";
+  static const String singUpScreenRoutes = "/SingUpScreen";
   static const String forgetPasswordScreenRoutes = "/ForgetPasswordScreen";
   static const String oTPCodeScreenRoutes = "/OTPCodeScreen";
   static const String restPasswordScreenRoutes = "/RestPasswordScreen";
@@ -39,7 +42,9 @@ class AppRoutes {
       case Routes.oTPCodeScreenRoutes:
         return MaterialPageRoute(builder: (context) => OTPCodeScreen());
       case Routes.restPasswordScreenRoutes:
-        return MaterialPageRoute(builder: (context)=>RestPasswordScreen());
+        return MaterialPageRoute(builder: (context) => RestPasswordScreen());
+      case Routes.singUpScreenRoutes:
+        return MaterialPageRoute(builder: (context) => const SignupScreen());
     }
   }
 }
