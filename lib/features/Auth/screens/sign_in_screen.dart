@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:skin_cancer_app/config/routes/app_routes.dart';
+import '../../../core/routing/app_routes.dart';
+import 'package:skin_cancer_app/core/helper/exetention.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/assets_path.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
@@ -177,7 +178,11 @@ class _SingInScreenState extends State<SingInScreen> {
                                         daliogContent: StringManager.doneDaliog,
                                         actionName: "Go to Home",
                                         context: context,
-                                        onTap: () {});
+                                        onTap: () {
+                                          context.pushReplacementNamed(
+                                            Routes.gnavBar,
+                                          );
+                                        });
                                   }
                                 },
                                 textColor: Colors.white,
@@ -195,12 +200,18 @@ class _SingInScreenState extends State<SingInScreen> {
                                       fontSize: 16.sp,
                                       fontWeight: FontWeight.w500),
                                 ),
-                                Text(
-                                  StringManager.signUp,
-                                  style: TextStyle(
-                                      color: AppColor.signUptext,
-                                      fontSize: 18.sp,
-                                      fontWeight: FontWeight.w500),
+                                InkWell(
+                                  onTap: () {
+                                    context
+                                        .pushNamed(Routes.singUpScreenRoutes);
+                                  },
+                                  child: Text(
+                                    StringManager.signUp,
+                                    style: TextStyle(
+                                        color: AppColor.signUptext,
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.w500),
+                                  ),
                                 )
                               ],
                             )

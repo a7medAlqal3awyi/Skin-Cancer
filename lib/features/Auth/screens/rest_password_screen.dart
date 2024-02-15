@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:skin_cancer_app/config/routes/app_routes.dart';
+import '../../../core/routing/app_routes.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
 import 'package:skin_cancer_app/core/widgets/custom_button.dart';
@@ -12,6 +12,8 @@ class RestPasswordScreen extends StatelessWidget {
   final passwordController = TextEditingController();
   final repasswordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+
+  RestPasswordScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

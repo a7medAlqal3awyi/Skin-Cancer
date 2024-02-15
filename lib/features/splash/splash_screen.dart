@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
-import 'package:skin_cancer_app/config/routes/app_routes.dart';
+import '../../../core/routing/app_routes.dart';
 import 'package:skin_cancer_app/core/utils/assets_path.dart';
 
 class SplashScreen extends StatefulWidget {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skin_cancer_app/config/routes/app_routes.dart';
+import 'package:skin_cancer_app/core/helper/exetention.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/assets_path.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
@@ -62,7 +63,7 @@ class ChoseAuthFunScreen extends StatelessWidget {
                   height: 61.h,
                   buttonName: StringManager.signIn,
                   onTap: () {
-                    Navigator.of(context).pushNamed(Routes.singInScreenRoutes);
+                    context.pushNamed(Routes.singInScreenRoutes);
                   },
                   textColor: Colors.white,
                   white: false),
@@ -74,7 +75,10 @@ class ChoseAuthFunScreen extends StatelessWidget {
                 width: 317.w,
                 height: 61.h,
                 buttonName: StringManager.signUp,
-                onTap: () {},
+                onTap: () {
+                  context.pushNamed(Routes.singUpScreenRoutes);
+
+                },
                 textColor: AppColor.buttonColor,
                 white: true,
               )

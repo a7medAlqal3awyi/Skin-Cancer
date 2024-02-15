@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
 
-import '../config/routes/app_routes.dart';
+import '../core/routing/app_routes.dart';
+
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, required this.appRouter});
 
-  // This widget is the root of your application.
+  final AppRouter appRouter;
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -15,9 +17,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return const MaterialApp(
+        return  MaterialApp(
           debugShowCheckedModeBanner: false,
-          onGenerateRoute: AppRoutes.onGenerateRoute,
+          onGenerateRoute: appRouter.onGenerateRoute,
         );
       },
     );
