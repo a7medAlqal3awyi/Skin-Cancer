@@ -15,6 +15,7 @@ import '../../features/Auth/sign_up/sign_up_screen.dart';
 import '../../features/bottom_nav/gnav_bar.dart';
 import '../../features/home/cancer_types/cancer_facts_screen.dart';
 import '../../features/home/cancer_types/cancer_info_screen.dart';
+import '../../features/home/cancer_types/early_detection.dart';
 
 class Routes {
   static const String initialRoutes = "/";
@@ -33,6 +34,7 @@ class Routes {
   static const String riskFactorsScreen = "/RiskFactorsScreen";
   static const String skinCancerPreventionScreen =
       "/SkinCancerPreventionScreen";
+  static const String earlyDetectionScreen = "/EarlyDetectionScreen";
 }
 
 class AppRouter {
@@ -97,6 +99,9 @@ class AppRouter {
       case Routes.skinCancerPreventionScreen:
         return MaterialPageRoute(
           builder: (context) => const SkinCancerPreventionScreen(),
+        ); case Routes.earlyDetectionScreen:
+        return MaterialPageRoute(
+          builder: (context) => const EarlyDetectionScreen(),
         );
       default:
         return MaterialPageRoute(
