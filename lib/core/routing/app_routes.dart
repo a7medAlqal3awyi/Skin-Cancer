@@ -3,6 +3,7 @@ import 'package:skin_cancer_app/features/Auth/screens/forget_password_screen.dar
 import 'package:skin_cancer_app/features/Auth/screens/otp_code_screen.dart';
 import 'package:skin_cancer_app/features/Auth/screens/rest_password_screen.dart';
 import 'package:skin_cancer_app/features/Auth/screens/sign_in_screen.dart';
+import 'package:skin_cancer_app/features/home/cancer_types/risk_factors.dart';
 import 'package:skin_cancer_app/features/home/home_screen.dart';
 import 'package:skin_cancer_app/features/onBoarding/screens/chose_auth_fun_screen.dart';
 import 'package:skin_cancer_app/features/onBoarding/screens/chose_user.dart';
@@ -11,6 +12,7 @@ import 'package:skin_cancer_app/features/splash/splash_screen.dart';
 
 import '../../features/Auth/sign_up/sign_up_screen.dart';
 import '../../features/bottom_nav/gnav_bar.dart';
+import '../../features/home/cancer_types/cancer_facts_screen.dart';
 import '../../features/home/cancer_types/cancer_info_screen.dart';
 
 class Routes {
@@ -26,6 +28,8 @@ class Routes {
   static const String homeScreen = "/HomeScreen";
   static const String gnavBar = "/GnavBar";
   static const String cancerInfoScreen = "/CancerInfoScreen";
+  static const String cancerFactsScreen = "/CancerFactsScreen";
+  static const String riskFactorsScreen = "/RiskFactorsScreen";
 }
 
 class AppRouter {
@@ -78,6 +82,13 @@ class AppRouter {
       case Routes.cancerInfoScreen:
         return MaterialPageRoute(
           builder: (context) => const CancerInfoScreen(),
+        );
+      case Routes.cancerFactsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const CancerFactsScreen(),
+        );case Routes.riskFactorsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const RiskFactorsScreen(),
         );
       default:
         return MaterialPageRoute(

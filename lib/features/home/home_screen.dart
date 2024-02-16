@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:skin_cancer_app/core/helper/exetention.dart';
 import 'package:skin_cancer_app/core/helper/spacing.dart';
 import 'package:skin_cancer_app/features/home/widget/hi_container.dart';
 import 'package:skin_cancer_app/features/home/widget/learnig_center.dart';
 import 'package:skin_cancer_app/features/home/widget/row_of_icon_text_arrow.dart';
 
+import '../../core/routing/app_routes.dart';
 import 'widget/text_with_ai.dart';
 import 'widget/what_skin_cancer.dart';
 
@@ -23,10 +25,20 @@ class HomeScreen extends StatelessWidget {
             const WhatSkinCancer(),
             verticalSpacing(14),
             const LearningCenter(),
-            const RowOfIconTextArrow(text: "Skin Cancer Facts and Statistics"),
-            const RowOfIconTextArrow(text: "Risk Factors"),
-            const RowOfIconTextArrow(text: "Prevention"),
-            const RowOfIconTextArrow(
+            RowOfIconTextArrow(
+              text: "Skin Cancer Facts and Statistics",
+              onTap: () {
+                context.pushNamed(Routes.cancerFactsScreen);
+              },
+            ),
+            RowOfIconTextArrow(
+              text: "Risk Factors",
+              onTap: () {
+                context.pushNamed(Routes.riskFactorsScreen);
+              },
+            ),
+            RowOfIconTextArrow(text: "Prevention"),
+            RowOfIconTextArrow(
                 text: "Early Detection", iconPath: "assets/image/alarm.png"),
           ]),
         ),

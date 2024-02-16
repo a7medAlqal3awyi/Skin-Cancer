@@ -16,22 +16,24 @@ class CancerTypesWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                verticalSpacing(30),
-                Text(
-                  cancerType,
-                  style: TextStyles.font22MoveW700,
-                ),
-                verticalSpacing(20),
-                Image.asset(imagePath),
-                verticalSpacing(20),
-                Text(info, style: TextStyles.font17BlackW500)
-              ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  verticalSpacing(30),
+                  Text(
+                    cancerType,
+                    style: TextStyles.font22MoveW700,
+                  ),
+                  verticalSpacing(20),
+                  Image.asset(imagePath),
+                  verticalSpacing(20),
+                  Text(info, style: TextStyles.font17BlackW500)
+                ],
+              ),
             ),
           ),
         ),
