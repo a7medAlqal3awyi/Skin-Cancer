@@ -37,7 +37,11 @@ class HomeScreen extends StatelessWidget {
                 context.pushNamed(Routes.riskFactorsScreen);
               },
             ),
-            RowOfIconTextArrow(text: "Prevention"),
+            RowOfIconTextArrow(text: "Prevention",
+              onTap: () {
+                context.pushNamed(Routes.skinCancerPreventionScreen);
+              },
+            ),
             RowOfIconTextArrow(
                 text: "Early Detection", iconPath: "assets/image/alarm.png"),
           ]),
