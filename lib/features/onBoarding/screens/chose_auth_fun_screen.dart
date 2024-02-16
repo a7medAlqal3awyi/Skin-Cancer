@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:skin_cancer_app/config/routes/app_routes.dart';
+import 'package:skin_cancer_app/core/routing/app_routes.dart';
 import 'package:skin_cancer_app/core/helper/exetention.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/assets_path.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
-import 'package:skin_cancer_app/core/widgets/custom_button.dart';
+import 'package:skin_cancer_app/core/utils/text_styles.dart';
+import 'package:skin_cancer_app/core/widgets/app_button.dart';
+
 
 class ChoseAuthFunScreen extends StatelessWidget {
   const ChoseAuthFunScreen({super.key});
@@ -57,8 +59,8 @@ class ChoseAuthFunScreen extends StatelessWidget {
               SizedBox(
                 height: 25.h,
               ),
-              CustomButton(
-                  buttoncolor: AppColor.buttonColor,
+              AppButton(
+                  buttonColor: AppColor.buttonColor,
                   width: 317.w,
                   height: 61.h,
                   buttonName: StringManager.signIn,
@@ -70,8 +72,8 @@ class ChoseAuthFunScreen extends StatelessWidget {
               SizedBox(
                 height: 25.h,
               ),
-              CustomButton(
-                buttoncolor: Colors.white,
+              AppButton(
+                buttonColor: Colors.white,
                 width: 317.w,
                 height: 61.h,
                 buttonName: StringManager.signUp,
@@ -80,6 +82,7 @@ class ChoseAuthFunScreen extends StatelessWidget {
 
                 },
                 textColor: AppColor.buttonColor,
+                textOfButtonStyle: TextStyles.font20BlackW700,
                 white: true,
               )
             ],
