@@ -6,7 +6,7 @@ class RiskFactorsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CancerTypesWidgets(
+    return  const CancerTypesWidgets(
         cancerType: "Risk Factors",
         imagePath: "assets/image/risk_factors.png",
         info:
