@@ -43,7 +43,10 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             RowOfIconTextArrow(
-                text: "Early Detection", iconPath: "assets/image/alarm.png"),
+                text: "Early Detection", iconPath: "assets/image/alarm.png",
+            onTap: (){
+                  context.pushNamed(Routes.earlyDetectionScreen);
+            }),
           ]),
         ),
       ),
