@@ -6,7 +6,7 @@ import '../../../core/routing/app_routes.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/string_manager.dart';
 import '../../../../core/utils/text_styles.dart';
-import '../../../../core/widgets/custom_button.dart';
+import '../../../../core/widgets/app_button.dart';
 import '../../../../core/widgets/custom_dailog.dart';
 import '../../onBoarding/widgets/clipper.dart';
 import '../widgets/custom_text_feild.dart';
@@ -182,8 +182,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                     ),
                                   ),
                                   verticalSpacing(30),
-                                  CustomButton(
-                                    buttoncolor: AppColor.buttonColor,
+                                  AppButton(
+                                    buttonColor: AppColor.buttonColor,
                                     width: 358.w,
                                     height: 61.h,
                                     buttonName: StringManager.signUp,

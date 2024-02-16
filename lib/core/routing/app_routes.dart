@@ -11,6 +11,7 @@ import 'package:skin_cancer_app/features/splash/splash_screen.dart';
 
 import '../../features/Auth/sign_up/sign_up_screen.dart';
 import '../../features/bottom_nav/gnav_bar.dart';
+import '../../features/home/cancer_types/cancer_info_screen.dart';
 
 class Routes {
   static const String initialRoutes = "/";
@@ -24,6 +25,7 @@ class Routes {
   static const String restPasswordScreenRoutes = "/RestPasswordScreen";
   static const String homeScreen = "/HomeScreen";
   static const String gnavBar = "/GnavBar";
+  static const String cancerInfoScreen = "/CancerInfoScreen";
 }
 
 class AppRouter {
@@ -72,6 +74,10 @@ class AppRouter {
       case Routes.gnavBar:
         return MaterialPageRoute(
           builder: (_) => const MyGnavBar(),
+        );
+      case Routes.cancerInfoScreen:
+        return MaterialPageRoute(
+          builder: (context) => const CancerInfoScreen(),
         );
       default:
         return MaterialPageRoute(

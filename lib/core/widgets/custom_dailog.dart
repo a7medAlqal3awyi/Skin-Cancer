@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/assets_path.dart';
-import 'package:skin_cancer_app/core/widgets/custom_button.dart';
+import 'package:skin_cancer_app/core/widgets/app_button.dart';
 
 class DailogAlertFun{
   static Future<void> showMyDialog({required  String daliogContent ,required  String  actionName,required BuildContext context,required VoidCallback onTap}) async {
@@ -25,7 +25,7 @@ class DailogAlertFun{
                    SizedBox(height: 16.h,),
                    Text(daliogContent,style: TextStyle(color: Colors.black,fontSize: 18.sp,fontWeight: FontWeight.bold),),
                  SizedBox(height: 30.h,),
-                 CustomButton(buttonName: actionName,buttoncolor: AppColor.buttonColor,height: 52.h,width: 166,white: false,onTap:onTap,textColor: Colors.white,)  
+                 AppButton(buttonName: actionName,buttonColor: AppColor.buttonColor,height: 52.h,width: 166,white: false,onTap:onTap,textColor: Colors.white,)
             
             ]
             ),

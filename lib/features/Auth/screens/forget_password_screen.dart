@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/assets_path.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
-import 'package:skin_cancer_app/core/widgets/custom_button.dart';
+import 'package:skin_cancer_app/core/widgets/app_button.dart';
 import 'package:skin_cancer_app/features/Auth/widgets/custom_text_feild.dart';
 import 'package:skin_cancer_app/features/onBoarding/widgets/clipper.dart';
 
@@ -105,8 +105,8 @@ class ForgetPasswordScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  CustomButton(
-                      buttoncolor: AppColor.buttonColor,
+                  AppButton(
+                      buttonColor: AppColor.buttonColor,
                       width: 358.w,
                       height: 61.h,
                       buttonName: StringManager.sendCode,

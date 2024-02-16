@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/routing/app_routes.dart';
 import 'package:skin_cancer_app/core/utils/app_color.dart';
 import 'package:skin_cancer_app/core/utils/string_manager.dart';
-import 'package:skin_cancer_app/core/widgets/custom_button.dart';
+import 'package:skin_cancer_app/core/widgets/app_button.dart';
 import 'package:skin_cancer_app/features/onBoarding/widgets/clipper.dart';
 import 'package:pinput/pinput.dart';
 
@@ -141,8 +141,8 @@ class OTPCodeScreen extends StatelessWidget {
                   SizedBox(
                     height: 30.h,
                   ),
-                  CustomButton(
-                      buttoncolor: AppColor.buttonColor,
+                  AppButton(
+                      buttonColor: AppColor.buttonColor,
                       width: 358.w,
                       height: 61.h,
                       buttonName: StringManager.verify,
