@@ -3,6 +3,7 @@ import 'package:skin_cancer_app/features/Auth/screens/forget_password_screen.dar
 import 'package:skin_cancer_app/features/Auth/screens/otp_code_screen.dart';
 import 'package:skin_cancer_app/features/Auth/screens/rest_password_screen.dart';
 import 'package:skin_cancer_app/features/Auth/screens/sign_in_screen.dart';
+import 'package:skin_cancer_app/features/home/cancer_types/cancer_prevention.dart';
 import 'package:skin_cancer_app/features/home/cancer_types/risk_factors.dart';
 import 'package:skin_cancer_app/features/home/home_screen.dart';
 import 'package:skin_cancer_app/features/onBoarding/screens/chose_auth_fun_screen.dart';
@@ -30,6 +31,8 @@ class Routes {
   static const String cancerInfoScreen = "/CancerInfoScreen";
   static const String cancerFactsScreen = "/CancerFactsScreen";
   static const String riskFactorsScreen = "/RiskFactorsScreen";
+  static const String skinCancerPreventionScreen =
+      "/SkinCancerPreventionScreen";
 }
 
 class AppRouter {
@@ -86,9 +89,14 @@ class AppRouter {
       case Routes.cancerFactsScreen:
         return MaterialPageRoute(
           builder: (context) => const CancerFactsScreen(),
-        );case Routes.riskFactorsScreen:
+        );
+      case Routes.riskFactorsScreen:
         return MaterialPageRoute(
           builder: (context) => const RiskFactorsScreen(),
+        );
+      case Routes.skinCancerPreventionScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SkinCancerPreventionScreen(),
         );
       default:
         return MaterialPageRoute(
