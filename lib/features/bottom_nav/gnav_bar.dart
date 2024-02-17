@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:skin_cancer_app/features/home/home_screen.dart';
+import 'package:skin_cancer_app/features/profile/profile_screen.dart';
 
 class MyGnavBar extends StatefulWidget {
   const MyGnavBar({super.key});
@@ -14,16 +15,13 @@ class _MyGnavBarState extends State<MyGnavBar> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
+  static const  List<Widget> _widgetOptions = <Widget>[
+     HomeScreen(),
     Text(
       'Explore',
       style: optionStyle,
     ),
-    Text(
-      'Profile',
-      style: optionStyle,
-    ),
+    ProfileScreen(),
   ];
 
   @override
